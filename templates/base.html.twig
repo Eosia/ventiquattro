@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!--META start-->
+    {% include ('incs/head/meta.html.twig') %}
+    <!--META stop-->
+
+    <!--favicon start-->
+    {% include ('incs/head/favicon.html.twig') %}
+    <!--favicon stop-->
+
+    <!--analytics start-->
+    {% include ('incs/head/analytics.html.twig') %}
+    <!--analytics stop-->
+
+    <!--style start-->
+    {% include ('incs/head/style.html.twig') %}
+    <!--style stop-->
+
+    <!--cookie start-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <!--cookie stop-->
+
+</head>
+
+<body>
+
+    {% include ('incs/nav.html.twig') %}
+
+    {% block header %}
+
+
+    {% endblock %}
+
+    <!--corps page start-->
+    {% block body %}
+
+
+
+    {% endblock %}
+    <!--corps page stop-->
+
+    <!-- import du footer -->
+    {% include ('incs/footer.html.twig')%}
+
+    <!--cookie consent script-->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#587246"
+                }
+            },
+            "position": "bottom-left",
+            "content": {
+                "message": "Nous utilisons des cookies à des fins techniques pour enrichir les fonctionnalités de notre site.",
+                "dismiss": "J'accepte !"
+            }
+        });
+    </script>
+
+
+</body>
+</html>

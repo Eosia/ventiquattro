@@ -1,0 +1,46 @@
+/*scss navbar*/
+.navbar {
+  background-color: #000 !important;
+  /*bouton mobile*/
+}
+.navbar ul li {
+  font-family: "romanus";
+}
+.navbar ul li a {
+  color: #e7bd70 !important;
+}
+@media (min-width: 1200px) {
+  .navbar ul li a {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.3rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  .navbar ul li a {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem;
+  }
+}
+@media (max-width: 992px) {
+  .navbar ul li a {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.3rem;
+  }
+}
+@media (max-width: 576px) {
+  .navbar ul li a {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem;
+  }
+}
+.navbar .navbar-toggler {
+  border: 1px solid #587246 !important;
+}
+
+/*# sourceMappingURL=nav.css.map */

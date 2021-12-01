@@ -1,0 +1,59 @@
+/*scss footer*/
+footer {
+  background-color: #000;
+  min-height: 10vh !important;
+  height: auto;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: bottom !important;
+  bottom: 0 !important;
+}
+footer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 2vw;
+  padding-top: 3vh;
+}
+footer div p {
+  color: #e7bd70;
+  font-family: "romanus";
+  /*medias queries*/
+}
+@media (min-width: 1200px) {
+  footer div p {
+    font-size: 2.1rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  footer div p {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 992px) {
+  footer div p {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (max-width: 768px) {
+  footer div p {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 576px) {
+  footer div p {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+footer div i {
+  color: #e7bd70;
+}
+
+/*# sourceMappingURL=footer.css.map */

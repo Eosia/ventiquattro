@@ -1,0 +1,90 @@
+/*scss app*/
+/* app.scss fichier de surcharge */
+html, body {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+  max-width: 100% !important;
+  height: 100% !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+main {
+  min-height: 80vh !important;
+}
+
+@font-face {
+  font-family: "romanus";
+  src: url("../fonts/ROMANUS.otf");
+  font-display: auto;
+}
+.hidden {
+  display: none;
+}
+
+/*ligne verte*/
+.ligne-verte {
+  border-bottom: 7px solid #587246;
+}
+
+/*titre avec bande verte*/
+.title-green {
+  background-color: #587246;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.font-romanus {
+  font-family: "romanus";
+  letter-spacing: 0.2em;
+}
+
+h3 {
+  margin: auto !important;
+  padding: 2vh 0;
+  text-align: center;
+  font-family: "romanus";
+}
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 2.1rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  h3 {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 992px) {
+  h3 {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.6rem !important;
+    letter-spacing: 0.2rem !important;
+  }
+}
+@media (max-width: 576px) {
+  h3 {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+}
+
+#login-page {
+  min-height: 80vh !important;
+}
+
+.color-green {
+  color: #587246;
+}
+
+/*# sourceMappingURL=app.css.map */

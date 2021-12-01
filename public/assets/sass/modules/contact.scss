@@ -1,0 +1,50 @@
+.contact {
+  p {
+    font-family: "romanus";
+  }
+
+  .btn-card{
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      font-size: 1.2rem !important;
+      letter-spacing: 0.3rem !important;
+    }
+
+    // Extra large devices (large desktops, 1200px and bottom)
+    @media (max-width: 1199px) {
+      font-size: 1.1rem !important;
+      letter-spacing: 0.2rem;
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (max-width: 992px) {
+      font-size: 1.2rem !important;
+      letter-spacing: 0.1rem;
+      padding: 5px 10px !important;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (max-width: 768px) {
+      font-size: 1.2rem !important;
+      letter-spacing: 0.1rem;
+      margin-bottom: 5vh;
+      padding: 5px 10px !important;
+      width: 100vw !important;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (max-width: 576px) {
+      font-size: 0.7rem !important;
+      letter-spacing: 0.1rem;
+      width: 100% !important;
+
+    }
+
+  }
+
+}

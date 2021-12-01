@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VENTIQUATTRO | L'EPICERIE{% endblock %}
+
+
+
+{% block header %}
+
+    <!--header start-->
+    <header class="ligne-verte header-produits">
+
+        <div class="div-brand container-fluid">
+
+            <div class="row mx-auto text-center col-8 col-sm-4 col-md-3 col-lg-2 col-xl-2 pt-5">
+                <!--icone facebook-->
+                <div class="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-1 mx-auto text-center">
+                    <a href="https://www.facebook.com/ventiquattro.fr"
+                       target="_blank" rel="noopener noreferrer nofollow" title="Page facebook de ventiquattro" >
+                        <i class="fab fa-facebook-square fa-3x text-dark"></i>
+                    </a>
+                </div>
+                <!--icone instagram-->
+                <div class="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-1 mx-auto text-center">
+                    <a href="https://www.instagram.com/ventiquattro.fr"
+                       target="_blank" rel="noopener noreferrer nofollow" title="Page Instagram de ventiquattro">
+                        <i class="fab fa-instagram-square fa-3x text-dark"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="div-title row mx-auto text-center d-flex flex-column justify-content-around align-items-center mt-5">
+                <h1 class="text-uppercase mx-auto text-center">
+                    venti quattro
+                </h1>
+
+                <div class="ligne-or mx-auto text-center my-3"></div>
+
+                <h2 class="text-uppercase mx-auto text-center mt-3">
+                    cucina e vino
+                </h2>
+
+            </div>
+        </div>
+
+    </header>
+    <!--header stop-->
+
+
+{% endblock %}
+
+
+{% block body %}
+
+    <!--section start-->
+    <main class="container-fluid">
+        <!--section titre start-->
+        <section class="title-brand mb-5">
+            <div class="row">
+
+                <div class="title-green col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2">
+                    <h3 class="text-uppercase">
+                        L'épicerie
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+        {# container plats start #}
+        {% for gamme in gammes %}
+            <section class="my-2 mx-0 container-fluid">
+
+                {# nom de la categorie start #}
+                <div class="row my-1">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-3">
+                        <div class="separation my-2"></div>
+                        <h5 class="text-uppercase text-center">
+                            {{ gamme.nom | raw }}
+                        </h5>
+                        <div class="separation my-2"></div>
+                    </div>
+                </div>
+                {# nom de la categorie stop #}
+
+                <div class="container-fluid mx-0">
+                    <div class="row mx-0 text-center">
+
+                        {# listes des produits start #}
+                        {% for article in gamme.articles %}
+
+                            <div class="border border-grey mx-auto text-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 mb-3">
+
+                                <div class="mx-auto col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <h6 class="text-uppercase mt-3 text-break">
+                                        {{ article.nom | raw }}
+                                    </h6>
+                                    <p class="text-break text-center mx-auto">
+                                        {{ article.description | striptags | truncate(200) | raw }}
+                                    </p>
+                                </div>
+
+                                <div class="mb-3 mx-auto col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <p class="text-uppercase col-12">
+                                        Prix : {{ (article.prix/100) | number_format(2, ',', '.') }} €
+                                    </p>
+
+                                    <p class="text-center text-uppercase col-12">
+
+                                        {% if article.stock == true %}
+
+                                            <span class="badge badge-success text-uppercase px-2 py-1">Disponible</span>
+
+                                        {% else %}
+
+                                            <span class="badge badge-danger text-uppercase px-2 py-1">Indisponible</span>
+
+                                        {% endif %}
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+                        {# listes des produits stop #}
+                    </div>
+                </div>
+            </section>
+
+        {% endfor %}
+        {# container plats end #}
+
+    </main>
+    <!--section end-->
+
+{% endblock %}

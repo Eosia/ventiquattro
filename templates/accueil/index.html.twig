@@ -1,0 +1,319 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VENTIQUATTRO | ACCUEIL{% endblock %}
+
+
+
+{% block header %}
+
+    <!--header start-->
+    <header class="ligne-verte" id="header-accueil">
+
+        <div class="div-brand container-fluid">
+
+            <div class="row mx-auto text-center col-8 col-sm-4 col-md-3 col-lg-2 col-xl-2 pt-5">
+                <!--icone facebook-->
+                <div class="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-1 mx-auto text-center">
+                    <a href="https://www.facebook.com/ventiquattro.fr"
+                       target="_blank" rel="noopener noreferrer nofollow" title="Page facebook de ventiquattro" >
+                        <i class="fab fa-facebook-square fa-3x text-dark"></i>
+                    </a>
+                </div>
+                <!--icone instagram-->
+                <div class="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-1 mx-auto text-center">
+                    <a href="https://www.instagram.com/ventiquattro.fr"
+                       target="_blank" rel="noopener noreferrer nofollow" title="Page Instagram de ventiquattro">
+                        <i class="fab fa-instagram-square fa-3x text-dark"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="div-title row mx-auto text-center d-flex flex-column justify-content-around align-items-center mt-5">
+                <h1 class="text-uppercase mx-auto text-center">
+                    venti quattro
+                </h1>
+
+                <div class="ligne-or mx-auto text-center my-3"></div>
+
+                <h2 class="text-uppercase mx-auto text-center mt-3">
+                    cucina e vino
+                </h2>
+
+            </div>
+        </div>
+
+    </header>
+    <!--header stop-->
+
+{% endblock %}
+
+
+
+
+{% block body %}
+
+    <!--main start-->
+    <main class="container-fluid mx-0 my-5">
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 mx-auto mb-5" style="background: #000 !important;">
+            <h4 class=".color-green text-center mx-auto text-uppercase">
+                Gastronomia Italiana
+            </h4>
+        </div>
+        <!--section 3 cards avec boutons start-->
+        <section class="accueil-3cards container-fluid mx-auto text-center">
+            <div class="row mx-auto text-center">
+                <!--cave à vin-->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mx-auto">
+                    <figure class="col-10 col-sm-10 col-md-12 col-lg-12 col-xl-12 mx-auto text-center">
+                        <img src="assets/img/card1.jpg" alt="image de La cave à vin de ventiquattro"
+                             loading="lazy"
+                             aria-label="L'épicerie de ventiquattro"
+                             class="img-fluid img-green" >
+
+                        <figcaption class="hidden">
+                            Le bar à vins de ventiquattro
+                        </figcaption>
+                    </figure>
+                    <a href="{{ path('vins') }}" class="btn-card btn btn-md col-12">
+                        Le bar à vins
+                    </a>
+                </div>
+                <!--L'épicerie-->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mx-auto">
+                    <figure class="col-10 col-sm-10 col-md-12 col-lg-12 col-xl-12 mx-auto text-center">
+                        <img src="assets/img/card2.jpg" alt="image de L'épicerie de ventiquattro"
+                             loading="lazy"
+                             aria-label="L'épicerie de ventiquattro"
+                             class="img-fluid img-green" >
+                        <figcaption class="hidden">
+                            L'épicerie de ventiquattro
+                        </figcaption>
+                    </figure>
+                    <a href="{{ path('epicerie') }}" class="btn-card btn btn-md">
+                        L'épicerie
+                    </a>
+                </div>
+                <!--La cuisine-->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mx-auto">
+                    <figure class="col-10 col-sm-10 col-md-12 col-lg-12 col-xl-12 mx-auto text-center">
+                        <img src="assets/img/card3.jpg" alt="image Le restaurant de ventiquattro"
+                             loading="lazy"
+                             aria-label="Le restaurant de ventiquattro"
+                             class="img-fluid img-green" >
+                        <figcaption class="hidden">
+                            Le restaurant de ventiquattro
+                        </figcaption>
+                    </figure>
+                    <a href="{{ path('restaurant') }}" class="btn-card btn btn-md">
+                        Le restaurant
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--section 3 cards avec boutons end-->
+
+        <!--section localisation et contact start-->
+        <section class="accueil-localisation my-5">
+            <div class="row">
+
+                <div class="title-green col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-5">
+                    <h3 class="text-uppercase">
+                        localisation et contact
+                    </h3>
+                </div>
+            </div>
+            <div class="container-fluid mx-auto text-center">
+                <div class="row mx-auto text-center d-flex justify-content-around align-items-center">
+                    <!--coordonnees-->
+                    <div class="col-left col-12 col-sm-12 col-md-10 col-lg-4 col-xl-4 mx-auto">
+                        <h4 class="text-uppercase">notre adresse</h4>
+
+                        <address class="text-uppercasemx-auto text-center h5 font-romanus">
+                            24 rue Saint-Christophe <br>
+                            59500 douai
+                        </address>
+
+                        <h4 class="text-uppercase">
+                            nous contacter
+                        </h4>
+
+                        <div class="button-link col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 mx-auto text-center">
+
+                            <SCRIPT TYPE="text/javascript">
+                                telE = '27867914'
+                                telE = ('+33' + '03' + telE)
+                                document.write('<A class="btn-card btn btn-lg col-12 text-uppercase my-3" href="tel:' + telE + '">téléphone</A>')
+                            </script>
+                            <NOSCRIPT>
+                                Phone number protected by JavaScript
+                            </NOSCRIPT>
+
+                            <!--email-->
+                            <SCRIPT TYPE="text/javascript">
+                                emailE = 'ventiquattro.fr'
+                                emailE = ('contact' + '@' + emailE)
+                                document.write('<A class="btn-card btn btn-lg col-12 text-uppercase my-3" href="mailto:' + emailE + '">email</A>')
+                            </script>
+
+                            <NOSCRIPT>
+                                Email address protected by JavaScript
+                            </NOSCRIPT>
+                        </div>
+                    </div>
+
+                    <!--maps-->
+                    <div class="col-right col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                        <h4 class="text-uppercase">Plan d'accès</h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.8263648801385!2d3.080111915896998!3d50.369792101054216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2c942ac6d7529%3A0x946c39247562cf7!2s24%20Rue%20Saint-Christophe%2C%2059500%20Douai%2C%20France!5e0!3m2!1sfr!2sbe!4v1622112580246!5m2!1sfr!2sbe"
+                                width="90%" height="350px" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section localisation et contact end-->
+
+        <!--section horaire start-->
+        <section class="accueil-horaire my-5">
+
+            <div class="row">
+
+                <div class="title-green col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-5">
+                    <h3 class="text-uppercase">
+                        horaire d'ouverture
+                    </h3>
+                </div>
+            </div>
+
+            <!--lundi-->
+            <div class="row mx-auto text-center col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                <!--jour-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">lundi</li>
+                    </ul>
+                </div>
+                <!--heures-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">Fermé</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="separation"></div>
+
+            <!--mardi-->
+            <div class="row mx-auto text-center col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                <!--jour-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">mardi</li>
+                    </ul>
+                </div>
+                <!--heures-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">10 : 00 - 18 : 30</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="separation"></div>
+
+            <!--mercredi-->
+            <div class="row mx-auto text-center col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                <!--jour-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">mercredi</li>
+                    </ul>
+                </div>
+                <!--heures-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">10 : 00 - 18 : 30</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="separation"></div>
+
+            <!--jeudi-->
+            <div class="row mx-auto text-center col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                <!--jour-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">jeudi</li>
+                    </ul>
+                </div>
+                <!--heures-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">10 : 00 - 18 : 30</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="separation"></div>
+
+            <!--vendredi-->
+            <div class="row mx-auto text-center col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                <!--jour-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">vendredi</li>
+                    </ul>
+                </div>
+                <!--heures-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">10 : 00 - 21 : 30</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="separation"></div>
+
+            <!--samedi-->
+            <div class="row mx-auto text-center col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                <!--jour-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">samedi</li>
+                    </ul>
+                </div>
+                <!--heures-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">10 : 00 - 21 : 30</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="separation"></div>
+
+
+            <!--dimanche-->
+            <div class="row mx-auto text-center col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                <!--jour-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">dimanche</li>
+                    </ul>
+                </div>
+                <!--heures-->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mx-auto text-center">
+                    <ul class="list-group text-uppercase h4">
+                        <li class="list-group-item">Fermé</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <!--section horaire end-->
+
+    </main>
+    <!--main end-->
+
+{% endblock %}

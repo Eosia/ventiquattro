@@ -1,0 +1,52 @@
+/*scss navbar*/
+
+.navbar {
+    background-color: #000 !important;
+
+    ul {
+        li {
+            font-family: "romanus";
+            a {
+                color: #e7bd70 !important;
+
+                // Extra large devices (large desktops, 1200px and up)
+                @media (min-width: 1200px) {
+                    font-size: 1.6rem !important;
+                    letter-spacing: 0.3rem !important;
+                }
+            
+                // Extra large devices (large desktops, 1200px and bottom)
+                @media (max-width: 1199px) {
+                    font-size: 1.4rem !important;
+                    letter-spacing: 0.2rem;
+                }
+            
+                // Large devices (desktops, 992px and up)
+                @media (max-width: 992px) {
+                    font-size: 1.4rem !important;
+                    letter-spacing: 0.3rem;
+                }
+            
+                // Medium devices (tablets, 768px and up)
+                @media (max-width: 768px) {
+                    font-size: 1.2rem !important;
+                    letter-spacing: 0.3rem;
+                }
+            
+                // Small devices (landscape phones, 576px and up)
+                @media (max-width: 576px) {
+                    font-size: 1.2rem !important;
+                    letter-spacing: 0.1rem;
+                }
+            }
+        }
+    }
+
+    /*bouton mobile*/
+    .navbar-toggler {
+        border:  1px solid #587246 !important;
+
+
+    }
+
+}

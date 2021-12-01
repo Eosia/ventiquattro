@@ -1,0 +1,279 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VENTIQUATTRO | HISTOIRE{% endblock %}
+
+
+
+{% block header %}
+
+    <!--header start-->
+    <header class="ligne-verte" id="header-histoire">
+
+        <div class="div-brand container-fluid">
+
+            <div class="row mx-auto text-center col-8 col-sm-4 col-md-3 col-lg-2 col-xl-2 pt-5">
+                <!--icone facebook-->
+                <div class="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-1 mx-auto text-center">
+                    <a href="https://www.facebook.com/ventiquattro.fr"
+                       target="_blank" rel="noopener noreferrer nofollow" title="Page facebook de ventiquattro">
+                        <i class="fab fa-facebook-square fa-3x text-dark"></i>
+                    </a>
+                </div>
+                <!--icone instagram-->
+                <div class="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-1 mx-auto text-center">
+                    <a href="https://www.instagram.com/ventiquattro.fr"
+                       target="_blank" rel="noopener noreferrer nofollow" title="Page Instagram de ventiquattro">
+                        <i class="fab fa-instagram-square fa-3x text-dark"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="div-title row mx-auto text-center d-flex flex-column justify-content-around align-items-center mt-5">
+                <h1 class="text-uppercase mx-auto text-center">
+                    venti quattro
+                </h1>
+
+                <div class="ligne-or mx-auto text-center my-3"></div>
+
+                <h2 class="text-uppercase mx-auto text-center mt-3">
+                    cucina e vino
+                </h2>
+
+            </div>
+        </div>
+
+    </header>
+    <!--header stop-->
+
+
+{% endblock %}
+
+
+
+
+{% block body %}
+
+    <!--section titre start-->
+    <section class="title-brand container-fluid mb-2">
+        <div class="row">
+
+            <div class="title-green col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-5">
+                <h3 class="text-uppercase">
+                    notre histoire
+                </h3>
+            </div>
+        </div>
+    </section>
+    <!--section titre end-->
+
+    <!--section intro restaurant-->
+    <section class="container mb-5">
+        <h4 class="text-uppercase text-left text-dark font-weight-bold">
+            Il 24, un restaurant italien moderne imaginé par un passionné de gastronomie
+        </h4>
+
+        <p class="text-left mx-auto">
+            Envie de voyager au soleil et de goûter aux vraies <strong>saveurs de l’Italie</strong> ?
+            <br>
+            Tenté par un <strong>spritz</strong>, un <strong>verre de Chianti ou de Lambrusco</strong> agrémenté
+            d’une<strong> pizza</strong> aux arômes de tomates et de basilic frais ?
+            <br>
+            Nul besoin de billets d’avion, embarquez pour <strong>Il Ventiquattro</strong>, votre <strong>nouvelle
+                pizzeria à Douai.</strong>
+        </p>
+    </section>
+    <!--section intro restaurant/-->
+
+    <!--section qui suis-je-->
+    <section class="container">
+        <div class="row font-romanus d-flex justify-content-center align-items-center">
+            <div class="col-11 col-sm-12 col-md-8 col-lg-9 col-xl-8 text-left d-flex flex-column justify-content-between align-items-start">
+                <h4 class="text-uppercase text-left text-dark">
+                    Remo Cavaliere, un passionné de gastronomie italienne
+                </h4>
+                <p class="mb-5 mt-3 h5 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    Remo est tombé dans la pasta et la pizza quand il était petit, avec sa mama qui puisait dans la
+                    tradition italienne pour régaler ses enfants.
+                    Sa première expérience dans la cuisine a été sans surprise… une pizzeria dans laquelle il a acquis
+                    une solide expérience et
+                    développé sa créativité culinaire. Après une envie de voir d’autres horizons, il revient à son rêve
+                    de jeunesse avec l'ouverture du Ventiquattro.
+                    Adepte des produits frais et de saison, il vous transmet dans l’assiette toute la fraîcheur et le
+                    goût des ingrédients qui l’ont ravi lors de ses séjours en Italie.
+                    En amoureux de la dolce vita, il est allé à la recherche de producteurs et artisans italiens pour
+                    vous faire partager son amour de la vraie cucina italiana.
+                    <br>
+                    Comme Remo aime le répéter : <br><em>"Ma passion est de faire plaisir à vos papilles ! "</em>
+                </p>
+            </div>
+            <!--photo de remo-->
+            <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-4">
+                <figure class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto text-center">
+                    <img src="{{ asset('assets/img/remo.jpg') }}" alt="image de Remo Cavaliere" loading="lazy"
+                         aria-label="Remo Cavaliere" class="img-fluid img-green">
+
+                    <figcaption class="hidden">
+                        Remo Cavaliere
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!--visite guidée-->
+    <div class="container-fluid my-5">
+        <div class="row">
+            <h4 class="text-uppercase title-bottom">
+                - visite guidée -
+            </h4>
+        </div>
+    </div>
+
+    <!--coté bar à vin-->
+    <section class="slide-visite mb-5 mx-auto text-center">
+        <div class="row text-center mx-auto">
+            <div class="container-slide mx-0 text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ asset('assets/img/1.jpg') }}" class="d-block w-100" alt="image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('assets/img/2.jpg') }}" class="d-block w-100" alt="image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('assets/img/3.jpg') }}" class="d-block w-100" alt="image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('assets/img/4.jpg') }}" class="d-block w-100" alt="image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('assets/img/5.jpg') }}" class="d-block w-100" alt="image 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('assets/img/6.jpg') }}" class="d-block w-100" alt="image 6">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('assets/img/7.jpg') }}" class="d-block w-100" alt="image 7">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+
+
+    <!--notre concept-->
+
+    <section class="container my-5">
+        <div class="row font-romanus d-flex justify-content-around align-items-center mt-3">
+
+            <!--photo de pates-->
+            <div class="col-8 col-sm-8 col-md-5 col-lg-4 col-xl-4">
+                <figure class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-10 mx-auto text-center">
+                    <img src="{{ asset('assets/img/four.jpeg') }}" alt="image du four de chez ventiquattro"
+                         loading="lazy"
+                         aria-label="image du four de chez ventiquattro" class="img-fluid img-green">
+
+                    <figcaption class="hidden">
+                        image du four de chez ventiquattro
+                    </figcaption>
+                </figure>
+            </div>
+
+
+            <div class="col-11 col-sm-12 col-md-7 col-lg-8 col-xl-8 text-justify d-flex flex-column justify-content-around align-items-between">
+                <h4 class="title-bottom col-9 col-sm-8 col-md-12 col-lg-8 col-xl-6">
+                    Il ventiquattro, pizzeria à Douai
+                </h4>
+                <p class="my-5 h4">
+                    Authentique pizzeria nichée dans la rue Saint Christophe à Douai, il 24 vous accueille dans un
+                    espace
+                    aux teintes typiquement italiennes et au carrelage panaché qui vous conduira directement à Naples.
+                </p>
+                <p class="text-left">
+                    Le restaurant, savamment structuré, vous offre :
+                </p>
+
+                <ul>
+                    <li>
+                        Un espace restaurant aux murs vert olive, couleur phare de la maison, pour vous régaler de
+                        l’antipasto au dessert, il dolce pour les connaisseurs.
+                        La carte de la pizzeria est à l’image du pizzaiolo : généreuse, diversifiée, authentique et
+                        soignée.
+                    </li>
+
+                    <li class="my-2">
+                        Le bar à vins pour vous proposer une sélection du meilleur de l’Italie : du classique
+                        Montepulciano à des vins plus intimistes comme le Sartarelli ou
+                        le Statti. Remo saura, grâce à sa formation en oenologie, vous guider dans les accords et vous
+                        faire tester des vins qui vous ressemblent.
+                    </li>
+
+                    <li>
+                        L’espace épicerie pour emporter un morceau d’Italia chez vous :
+                        vous y retrouverez de la charcuterie al taglio, du fromage, des desserts parmi lesquels la
+                        fameuse sfogliatella calabraise.
+                    </li>
+
+                    <li class="mt-2">
+                        Pour les curieux, jetez un œil en cuisine au magnifique four en provenance directe de Napoli !
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row mx-auto col-11 col-sm-11 col-md-11 col-lg-11 col-xl-12">
+            <h4 class="text-uppercase title-bottom mb-5">
+                Du centre ville de Douai à Naples, <br> il n’y a qu’un pas
+            </h4>
+            <p class="text-justify font-romanus">
+                Imaginez vous à la terrasse d’un café sur la piazza del Plebiscito… Il y a du monde, beaucoup de monde.
+                Vous commandez votre cappuccino habituel en lisant votre journal. L’odeur de la pizza vous fait saliver.
+                <br><br>
+                Qu’allez-vous choisir ce midi ? Une margherita, une pizza al prosciutto, de généreuses pâtes fraîches carbonara ?
+                Vous vous laisseriez même tenter par une tomate savoureuse accompagnée de sa burrata fondante…
+                Côté plats, Remo vous régalera de son escalope milanaise faite maison et bien d’autres suggestions du chef.
+                <br><br>
+                Pour les adeptes de la pizza à emporter, il se fera un plaisir de vous confectionner celle que vous préférez pour passer une soirée savoureuse.
+                <br>
+                Et si vous avez envie d’un afterwork autour d’une planche de charcuterie et fromages italiens, vous avez trouvé la bonne adresse !
+                <br><br>
+                Toutes ces spécialités italiennes sont désormais à portée de main dans la ville de Monsieur et Madame Gayant.
+            </p>
+
+            <p class="text-justify mt-2 font-romanus">
+                Préférerez-vous vous installer confortablement autour de l’olivier ou sur la chaise haute du bar pour discuter comme à Naples ?
+                Toujours est-il que vous ne ressortirez pas du Ventiquattro sans avoir la sensation d’avoir voyagé dans la péninsule italienne le temps d’un repas...
+            </p>
+        </div>
+
+    </section>
+
+
+
+{% endblock %}

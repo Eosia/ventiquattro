@@ -1,0 +1,257 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VENTIQUATTRO | CONTACT{% endblock %}
+
+
+
+{% block header %}
+
+    <!--header start-->
+    <header class="ligne-verte" id="header-contact">
+
+        <div class="div-brand container-fluid">
+
+            <div class="row mx-auto text-center col-8 col-sm-4 col-md-3 col-lg-2 col-xl-2 pt-5">
+                <!--icone facebook-->
+                <div class="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-1 mx-auto text-center">
+                    <a href="https://www.facebook.com/ventiquattro.fr"
+                       target="_blank" rel="noopener noreferrer nofollow" title="Page facebook de ventiquattro">
+                        <i class="fab fa-facebook-square fa-3x text-dark"></i>
+                    </a>
+                </div>
+                <!--icone instagram-->
+                <div class="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-1 mx-auto text-center">
+                    <a href="https://www.instagram.com/ventiquattro.fr"
+                       target="_blank" rel="noopener noreferrer nofollow" title="Page Instagram de ventiquattro">
+                        <i class="fab fa-instagram-square fa-3x text-dark"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="div-title row mx-auto text-center d-flex flex-column justify-content-around align-items-center mt-5">
+                <h1 class="text-uppercase mx-auto text-center">
+                    venti quattro
+                </h1>
+
+                <div class="ligne-or mx-auto text-center my-3"></div>
+
+                <h2 class="text-uppercase mx-auto text-center mt-3">
+                    cucina e vino
+                </h2>
+
+            </div>
+        </div>
+
+    </header>
+    <!--header stop-->
+
+
+{% endblock %}
+
+
+{% block body %}
+
+    <!--main start-->
+    <main class="contact mb-5 container-fluid">
+        <!--section 1 titre start-->
+
+        <section class="title-brand mb-5">
+            <div class="row">
+
+                <div class="title-green col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2">
+                    <h3 class="text-uppercase">
+                        NOUS CONTACTER
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="mx-auto text-center container">
+            {% for message in app.flashes('message') %}
+                <div class="alert alert-success col-8 mx-auto text-center" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+        <!--section 1 titre stop-->
+
+
+        <!--formulaire de contact start-->
+        <section class="contact-section-2 container mx-auto text-center mt-5">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+
+                    {# form de contact -------------------------------------------------------------------------------------------- #}
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+                        {{ form_start(contactForm) }}
+                        <div class="row mx-auto text-center">
+
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto text-left">
+                                <label for="nom" class="required"> Nom *</label>
+                                <br>
+                                {{ form_widget(contactForm.nom) }}
+                                {{ form_errors(contactForm.nom) }}
+                            </div>
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto text-left">
+                                <label for="prenom" class="required"> Prénom *</label>
+                                <br>
+                                {{ form_widget(contactForm.prenom) }}
+                                {{ form_errors(contactForm.prenom) }}
+                            </div>
+                        </div>
+                        <div class="row mx-auto text-center">
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto text-left">
+                                <label for="email" class="required"> Email *</label>
+                                <br>
+                                {{ form_widget(contactForm.email) }}
+                                {{ form_errors(contactForm.email) }}
+                            </div>
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto text-left">
+                                <label for="telephone" class="required"> Téléphone *</label>
+                                <br>
+                                {{ form_widget(contactForm.telephone) }}
+                                {{ form_errors(contactForm.telephone) }}
+                            </div>
+                        </div>
+
+                        <div class="row mx-auto">
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-left">
+                                <label for="objet" class="required"> Objet *</label>
+                                <br/>
+                                {{ form_widget(contactForm.objet) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group text-left">
+                            <label for="contact_message" class="required"> Message *</label>
+                            <br>
+                            {{ form_widget(contactForm.message) }}
+                            {{ form_errors(contactForm.message) }}
+                        </div>
+
+                        <!--captcha a decommenter -------------------------------------------------------------------------------->
+
+                        <div class="form-group mx-auto text-left">
+                            <label for="captcha" class="required mb-3">Cochez le captcha pour envoyer votre
+                                message</label>
+                            <br>
+
+                            <div class="mx-auto text-center">
+                                {{ form_widget(contactForm.captcha_checkvox) }}
+                            </div>
+                            {{ form_errors(contactForm.captcha_checkvox) }}
+                        </div>
+
+                        <!--captcha a decommenter -------------------------------------------------------------------------------->
+
+
+                        <div class="form-group">
+                            {{ form_widget(contactForm.envoyer) }}
+                        </div>
+                        {# Render CSRF token etc . #}
+                        <div style="display:none">
+                            {{ form_rest(contactForm) }}
+                        </div>
+
+                        {{ form_end(contactForm) }}
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--formulaire de contact stop-->
+
+
+        <section class="accueil-localisation my-5">
+            <div class="row">
+
+                <div class="title-green col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-5">
+                    <h3 class="text-uppercase">
+                        localisation et contact
+                    </h3>
+                </div>
+            </div>
+            <div class="container-fluid mx-0 text-center">
+                <div class="row mx-auto text-center d-flex justify-content-around align-items-center">
+                    <!--coordonnees-->
+                    <div class="col-left col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto">
+                        <h4 class="text-uppercase">notre adresse</h4>
+
+                        <address class="text-uppercase mx-auto text-center h5 font-romanus">
+                            24 rue Saint-Christophe <br>
+                            59500 douai
+                        </address>
+
+                        <div class="button-link col-12 col-sm-12 col-md-8 col-lg-10 col-xl-8 mx-auto text-center">
+
+                            <h4 class="text-uppercase">
+                                Téléphone :
+                            </h4>
+
+                            <SCRIPT TYPE="text/javascript">
+                                telE = '27 86 79 14 '
+                                telE = (' +33' + ' 03 ' + telE)
+                                document.write('<A class="btn-card col-12 text-uppercase my-3 py-2 px-2 mx-auto text-center" href="tel:' + telE + '">' + telE + '</A>')
+                            </script>
+                            <NOSCRIPT>
+                                Phone number protected by JavaScript
+                            </NOSCRIPT>
+
+                        </div>
+
+                        <div class="button-link col-12 col-sm-12 col-md-8 col-lg-12 col-xl-11 my-3 mx-auto text-center">
+
+                            <h4 class="text-uppercase">
+                                EMAILS :
+                            </h4>
+
+                            <p class="text-uppercase">Client :</p>
+                            <!--email-->
+                            <SCRIPT TYPE="text/javascript">
+                                emailE = 'ventiquattro.fr'
+                                emailE = ('contact' + '@' + emailE)
+                                document.write('<A class="btn-card col-12 text-uppercase py-2 mx-auto text-center" href="mailto:' + emailE + '">' + emailE + '</A>')
+                            </script>
+
+                            <NOSCRIPT>
+                                Email address protected by JavaScript
+                            </NOSCRIPT>
+
+                            <p class="text-uppercase mt-3">Fournisseur :</p>
+                            <!--email-->
+                            <SCRIPT TYPE="text/javascript">
+                                emailE = 'ventiquattro.fr'
+                                emailE = ('remo.cavaliere' + '@' + emailE)
+                                document.write('<A class=" btn-card col-12 text-uppercase my-3 py-2 mx-auto text-center" href="mailto:' + emailE + '">' + emailE + '</A>')
+                            </script>
+
+                            <NOSCRIPT>
+                                Email address protected by JavaScript
+                            </NOSCRIPT>
+
+                        </div>
+
+                    </div>
+
+                    <!--maps-->
+                    <div class="col-right col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5">
+                        <h4 class="text-uppercase">Plan d'accès</h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.8263648801385!2d3.080111915896998!3d50.369792101054216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2c942ac6d7529%3A0x946c39247562cf7!2s24%20Rue%20Saint-Christophe%2C%2059500%20Douai%2C%20France!5e0!3m2!1sfr!2sbe!4v1622112580246!5m2!1sfr!2sbe"
+                                width="90%" height="350px" style="border:0;" allowfullscreen="true" aria-hidden="false"
+                                tabindex="0" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section localisation et contact end-->
+
+
+    </main>
+
+    <!--captcha js-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+{% endblock %}

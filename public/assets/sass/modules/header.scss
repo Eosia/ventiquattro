@@ -1,0 +1,138 @@
+/*scss header*/
+
+header {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  margin: 0 !important;
+  
+
+
+
+
+  .text-dark {
+    color: #000 !important;
+  }
+
+  .div-brand {
+    opacity: 1 !important;
+    background-color: rgba(212, 212, 212, 0.431);
+    width: 100% !important;
+    min-width: 100% !important;
+    min-height: 50vh;
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding-bottom: 10vh;
+  }
+
+  h1,h2 {
+    color: #333333;
+    font-family: "romanus";
+    font-weight: 700;
+
+  }
+
+  .ligne-or {
+    width: 20vw;
+    height: 5px;
+    background-color: #e7bd70;
+    opacity: 1 !important;
+  }
+
+  /*medias queries*/
+  /*H1*/
+  h1 {
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      font-size: 4.6rem !important;
+      letter-spacing: 0.4rem !important;
+    }
+
+    // Extra large devices (large desktops, 1200px and bottom)
+    @media (max-width: 1199px) {
+      font-size: 3rem !important;
+      letter-spacing: 0.6rem;
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (max-width: 992px) {
+      font-size: 2.4rem !important;
+      letter-spacing: 0.4rem;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (max-width: 768px) {
+      font-size: 2rem !important;
+      letter-spacing: 0.2rem;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (max-width: 576px) {
+      font-size: 2.2rem !important;
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  /*H2*/
+  h2 {
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      font-size: 2.1rem !important;
+      letter-spacing: 0.2rem !important;
+    }
+
+    // Extra large devices (large desktops, 1200px and bottom)
+    @media (max-width: 1199px) {
+      font-size: 1.4rem !important;
+      letter-spacing: 0.2rem !important;
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (max-width: 992px) {
+      font-size: 1.8rem !important;
+      letter-spacing: 0.1rem !important;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (max-width: 768px) {
+      font-size: 1.6rem !important;
+      letter-spacing: 0.2rem !important;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (max-width: 576px) {
+      font-size: 1.4rem !important;
+      letter-spacing: 0.1rem !important;
+    }
+  }
+
+}
+
+/*header personnalisé par page*/
+
+#header-accueil {
+  background-image: url("../../assets/img/brand_accueil.jpg");
+}
+
+.header-produits {
+  background-image: url("../../assets/img/brand_produits.jpg");
+}
+
+#header-restaurant {
+  background-image: url("../../assets/img/brand_restaurant.jpg");
+}
+
+#header-vins {
+  background-image: url("../../assets/img/brand_vins.jpg");
+}
+
+#header-histoire {
+  background-image: url("../../assets/img/brand_histoire.jpg");
+}
+
+#header-contact {
+  background-image: url("../../assets/img/brand_contact.jpg");
+}
+
+

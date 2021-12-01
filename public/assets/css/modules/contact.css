@@ -1,0 +1,45 @@
+.contact p {
+  font-family: "romanus";
+}
+.contact .btn-card {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+@media (min-width: 1200px) {
+  .contact .btn-card {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.3rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  .contact .btn-card {
+    font-size: 1.1rem !important;
+    letter-spacing: 0.2rem;
+  }
+}
+@media (max-width: 992px) {
+  .contact .btn-card {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem;
+    padding: 5px 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .contact .btn-card {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1rem;
+    margin-bottom: 5vh;
+    padding: 5px 10px !important;
+    width: 100vw !important;
+  }
+}
+@media (max-width: 576px) {
+  .contact .btn-card {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.1rem;
+    width: 100% !important;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

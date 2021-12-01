@@ -1,0 +1,14 @@
+/* root.scss */
+
+/* imports des modules scss -imports des css de toutes les pages du site- */
+
+@import 'app.scss';
+@import 'modules/accueil.scss';
+@import 'modules/epicerie.scss';
+@import 'modules/restaurant.scss';
+@import 'modules/vins.scss';
+@import 'modules/footer.scss';
+@import 'modules/header.scss';
+@import 'modules/contact.scss';
+@import 'modules/histoire.scss';
+@import 'modules/nav.scss';

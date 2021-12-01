@@ -1,0 +1,58 @@
+<!--nav start-->
+<nav class="ligne-verte nav-bar navbar navbar-expand-lg navbar-dark" id="nav">
+    <a class="navbar-brand" href="{{ path('accueil') }}">
+
+        <!--logo cliquable-->
+        <figure class="img-fluid">
+            <img src="{{ asset('assets/img/favicon/logo_rond_png.png') }}" loading="lazy"
+                 title="logo venti quattro"
+                 alt="logo venti quattro" style="width: 150px">
+            <!--figcaption est la legende d'une image-->
+            <figcaption class="hidden">
+                logo venti quattro
+            </figcaption>
+        </figure>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="nav-mobile navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto container">
+
+            <li class="nav-item active">
+                <a class="nav-link text-nav text-uppercase" href="{{ path('accueil') }}">accueil<span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-nav text-uppercase" href="{{ path('epicerie') }}">épicerie</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-nav text-uppercase" href="{{ path('restaurant') }}">restaurant</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-nav text-uppercase" href="{{ path('vins') }}">vins</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-nav text-uppercase" href="{{ path('histoire') }}">histoire</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-nav text-uppercase" href="{{ path('contact') }}">contact</a>
+            </li>
+
+            {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link" style="color: red !important;" href="{{ path('admin') }}">ADMIN</a>
+                </li>
+            {% endif %}
+
+        </ul>
+
+    </div>
+</nav>
+<!--nav stop-->
